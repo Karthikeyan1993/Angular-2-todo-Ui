@@ -9,20 +9,20 @@ import { TodoService } from './todo.service';
   providers: [TodoService]
 })
 export class TodoComponent implements OnInit {
-  private todo: Todo = new Todo;
-  private todos: Todo[] = [];
-  constructor(private todoService: TodoService) {
+  public todo: Todo = new Todo;
+  public todos: Todo[] = [];
+  constructor(public todoService: TodoService) {
   }
 
   ngOnInit() {
     this.getTodoListResult();
   }
 
-  private getTodoListResult(): void {
+  public getTodoListResult(): void {
     this.todoService.getTodoList().subscribe(data => this.todos = data);
   }
 
-  private saveTodoObject(): void {
+  public saveTodoObject(): void {
     this.todo._todoId = 0;
     this.todo._isCompleted = false;
     this.todoService.saveTodo(this.todo).subscribe(data => console.log(data));
@@ -31,13 +31,13 @@ export class TodoComponent implements OnInit {
     }, 100);
     this.clearModel();
   }
-  private deleteTodoObejct(id: number) {
+  public deleteTodoObejct(id: number) {
     this.todoService.deleteTodo(id).subscribe(data => console.log(data));
     setTimeout(() => {
       this.getTodoListResult();
     }, 100);
   }
-  private updateTodoObject(id: number) {
+  public updateTodoObject(id: number) {
     let _todo: Todo = new Todo();
     _todo = this.todos[id];
     _todo._isCompleted = true;
@@ -48,7 +48,7 @@ export class TodoComponent implements OnInit {
       this.getTodoListResult();
     }, 100);
   }
-  private clearModel(): void {
+  public clearModel(): void {
     this.todo._todoName = '';
     this.todo._todoDesc = '';
 
