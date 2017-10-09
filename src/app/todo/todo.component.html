@@ -1,0 +1,46 @@
+<mat-toolbar color="accent">
+  <span style="margin-right: 5px;"><mat-icon>mood</mat-icon></span>
+  <span>Yay, What's your plan today</span>
+</mat-toolbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="margin-top: 40px;">
+      <mat-card class="mat-card-class">
+        <form #form="ngForm" ngNativeValidate autocomplete="off">
+          <div class="form-group">
+            <input type="text" placeholder="Title" id="_todoName" name="_todoName" class="form-control" [(ngModel)]="this.todo._todoName"
+              required>
+          </div>
+          <div class="form-group">
+            <input type="text" required minlength="40" maxlength="50" id="_todoDesc" placeholder="Description" name="_todoDesc" class="form-control"
+              [(ngModel)]="this.todo._todoDesc">
+          </div>
+          <button type="submit" (click)="saveTodoObject()" mat-raised-button mat-fab color="accent" class="done" [disabled]="!form.valid"><mat-icon>add</mat-icon></button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-inline" style="margin-top: 40px;">
+        <li *ngFor="let todo of this.todos let i = index" [attr.data-index]="i" style="margin-top: 10px">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-chip-list>
+                  <mat-chip>{{todo._todoName}}</mat-chip>
+                </mat-chip-list>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content style="margin-left: 15px;" [ngClass]="{'strike':todo._isCompleted}">{{todo._todoDesc}}</mat-card-content>
+            <mat-card-actions style="border-top: 2px solid #ff0065 ">
+              <button (click)="updateTodoObject(i)" mat-raised-button [disabled]="todo._isCompleted" mat-fab color="accent"><mat-icon>check circle</mat-icon></button>
+              <button [disabled]="!todo._isCompleted" (click)="deleteTodoObejct(todo._todoId)" mat-raised-button mat-fab color="accent"
+                class="pull-right"><mat-icon>delete foreve</mat-icon></button>
+            </mat-card-actions>
+          </mat-card>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

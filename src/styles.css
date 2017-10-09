@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+  background-color: rgba(0, 0, 0, .87) !important;
+  /* background-image: url("memphis-colorful.png") !important; */
+  background-repeat: repeat;
+  resize: both;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.example-card {
+  width: 300px;
+  background-color: Indigo !important;
+  color: white;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-top: 2px solid #ff0065 !important;
+}
+
+mat-chip {
+  background-color: #ff0065 !important;
+  color: white !important;
+}
+

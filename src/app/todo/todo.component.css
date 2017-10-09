@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.done {
+  position: absolute;
+  right: 250px;
+  color: white;
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 -1px 0 #dddddd;
+  box-shadow: inset 0 -1px 0 #dddddd;
+  font-size: 16px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 37px;
+  padding: 6px 16px;
+  font-size: 13px;
+  line-height: 1.846;
+  color: white;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+input {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+}
+
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input {
+  line-height: normal;
+}
+
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  user-select: text;
+  cursor: auto;
+  padding: 1px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+input,
+textarea,
+select,
+{
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 13.3333px Arial;
+}
+
+input,
+textarea,
+select,
+meter,
+progress {
+  -webkit-writing-mode: horizontal-tb;
+}
+
+.table {
+  background: #424242 !important;
+  color: white
+}
+
+.mat-card-class {
+  background: #424242 !important;
+}
+
+.panel-default {
+  background: #424242 !important;
+  border: none;
+  color: white
+}
+
+.panel-heading,
+.panel-footer {
+  color: white !important;
+  background: #424242!important;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
